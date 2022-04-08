@@ -1,13 +1,114 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+
+:root{
+  --white: hsl(0, 0%, 100%);
+  --orange: hsl(25, 97%, 53%);
+   --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+     --dark-blue: hsl(213, 19%, 18%);
+      --very-dark-blue: hsl(216, 12%, 8%)
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Overpass',
+  sans-serif;
+  font-size: 16px;
+}
+
+body{
+  height: 100vh;
+  background-color: var(--very-dark-blue);
+  margin: 0 1.25rem ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper{
+  border-radius: 0.625rem;
+  background:linear-gradient(120deg, var(--dark-blue), var(--very-dark-blue));
+  padding: 1.25rem;
+}
+
+h2{
+  margin: 10px 0px;
+  font-size: 1.6rem;
+  color:var(--white);
+}
+
+p{
+  color:var(--light-grey);
+  margin-bottom: 10px;
+}
+
+ul{
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2px;
+}
+
+ul li {
+  list-style: none;
+}
+
+.star-container{
+  width: 30px;
+  height: 30px;
+  background-color: var(--light-grey);
+  border-radius: 50%;
+  position: relative;
+}
+
+.star{
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+
+.rating-btn{
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: all 0.25s ease-in-out;
+}
+
+.rating-btn:hover{
+  background-color: var(--orange);
+  color: #ffffff;
+}
+
+.rating-btn:focus{
+  background-color: var(--medium-grey);
+  color: #ffffff;
+}
+
+.btn-rating{
+  background-color: gray;
+  padding: 12px;
+  border: none;
+  border-radius: 24px;
+  background-color: var(--orange);
+  width: 100%;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+
+.btn-rating:hover{
+  background-color: #ffffff;
+  color: var(--orange);
+}
+
+@media (min-width:500px){
+  .wrapper{
+    width: 500px;
+  }
 }
